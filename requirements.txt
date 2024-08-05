@@ -1,0 +1,11 @@
+ollama
+transformers
+streamlit
+pandas
+tf-keras
+chromadb
+torch
+python-docx
+PyMuPDF
+watchdog
+scikit-learn
