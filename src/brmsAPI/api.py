@@ -13,6 +13,7 @@ class ApiCall:
         if response.status_code == 200:
             print("Success!")
             print("Response:", response.json())
+            return response.json()
         else:
             print("Failed with status code:", response.status_code)
             print("Response:", response.json())
