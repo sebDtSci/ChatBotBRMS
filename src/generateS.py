@@ -1,15 +1,11 @@
 import ollama
 import logging
+import re
 
 from src.memory import ChatbotMemory, memory_counter, compressed_memory
 from src.rag.new_chromadb import rag_pipeline
 import src.brmsAPI.api as ap
 import src.brmsAPI.payload_construction as pc
-
-# from memory import ChatbotMemory, memory_counter, compressed_memory
-# from rag.new_chromadb import rag_pipeline
-# import brmsAPI.api as ap
-# import brmsAPI.payload_construction as pc
 
 import streamlit as st
 import os
@@ -74,15 +70,34 @@ class Generate:
             self.assurance_phase = True
 
             # payload = {"__DecisionID__": "exampleID","contract": {"id": 12345,"clients": [{"nom": nom,"prenom": prenom,"age": age,"adresse": adresse}],"montant": 0}}
-            request = ("Extrait les informations suivantes au format liste suivant :\n [Nom , Prenom , Age , Adresse]. Si manquante laisser vide.\n\n Ne répond rien d'autre que la liste.")
-            result = ollama.generate(
-            model=self.model,
-            prompt=request,
-            stream=False,
-            options=self._ollama_option
-            )
+            request = (
+                "Tu es un expêrt en data capture, ton role est d'extraire uniquement les données requises.\n\n"
+                "Extrait les informations au format liste suivant :\n Nom ; Prenom ; Age ; Adresse.\n\n."
+                "Si il y a des informations manquantes laisse les zonnes vides.\n\n"
+                "Si il y a des données manquantes n'écris rien, laise vide.\n\n"
+                "Ne répond rien d'autre que la liste. Nom ; Prenom ; Age ; Adresse] .\n\n"
+                "Voici quelques exemples pour te montrer: \n\n"
+                "Exemple numéro 1; utilisateur:'Je veux une information sur une assurance, il s'agit de madame Durant Jenny' reponse:Durant ; Jenny.\n\n"
+                "Exemple numéro 2; utilisateur:'Nous voulons les données d'assurance de monsieur Alexandre Gigof agé de 56 ans et résident au 6 rue labradore, Paris' reponse: Gigof ; Alexandre ; 56 ; 6 rue labradore, Paris .\n\n"
+                "Exemple numéro 3; utilisateur:'' reponse: .\n\n"
+                "Exemple numéro 4; utilisateur:'j'aurais une question sur l assurance' reponse: .\n\n"
+                "Voici la phrase cible: " f"{user_input}"
+                )
             
-            payload = pc.payload_construction(nom="Dupont", prenom="Jean", age=53, adresse="123 Rue Exemple, Paris")
+            elements = ollama.generate(
+                # model=self.model,
+                model="mistral:latest",
+                prompt=request,
+                stream=False,
+                options=self._ollama_option
+            )
+            print("------------------------------------------------>>>>>>------------------------------------------------>>>>>>",elements["response"])
+            
+            elements2 = re.sub(r'[^a-zA-Z0-9;]', '', elements["response"])
+            elements3 = elements2.split(';')
+            print(elements3)
+            print(elements3[0])
+            payload = pc.payload_construction(nom=elements3[0], prenom=elements3[1], age=elements3[2], adresse=elements3[3])
             
             api = ap.ApiCall(url="http://10.21.8.3:9090/DecisionService/rest/v1/assurance_deploy/OD_assurance/", payload=payload, headers={'Content-Type': 'application/json'})
             test_completion = api.test_arguments()
