@@ -1,7 +1,6 @@
 import requests
 import json
 
-
 class ApiCall:
     def __init__(self, url, payload, headers):
         self.url = url
