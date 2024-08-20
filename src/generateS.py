@@ -1,12 +1,18 @@
 import ollama
 import logging
-from src.memory import ChatbotMemory, memory_counter, compressed_memory
-from src.rag.new_chromadb import rag_pipeline
+
+# from src.memory import ChatbotMemory, memory_counter, compressed_memory
+# from src.rag.new_chromadb import rag_pipeline
+# import src.brmsAPI.api as ap
+# import src.brmsAPI.payload_construction as pc
+
+from memory import ChatbotMemory, memory_counter, compressed_memory
+from rag.new_chromadb import rag_pipeline
+import brmsAPI.api as ap
+import brmsAPI.payload_construction as pc
+
 import streamlit as st
 import os
-
-import src.brmsAPI.api as ap
-import src.brmsAPI.payload_construction as pc
 
 # Désactiver le parallélisme pour éviter les deadlocks
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -71,11 +77,11 @@ class Generate:
             options=self._ollama_option
             )
             
-            def payload_construction(nom,prenom,age,adresse):
+            # def payload_construction(nom,prenom,age,adresse):
             
-            pc.payload_construction(nom="Dupont", prenom="Jean", age=23, adresse="123 Rue Exemple, Paris")
+            payload = pc.payload_construction(nom="Dupont", prenom="Jean", age=23, adresse="123 Rue Exemple, Paris")
             
-            api = ap.ApiCall(url="http://localhost:9090/DecisionService/rest/v1/assurance_deploy/OD_assurance/", payload, headers={'Content-Type': 'application/json'})
+            api = ap.ApiCall(url="http://10.21.8.3:9090/DecisionService/rest/v1/assurance_deploy/OD_assurance/", payload=payload, headers={'Content-Type': 'application/json'})
             test_completion = api.test_arguments()
             if test_completion is not None:
                 sentence = "Tu dois indiquer à ton interlocuteur que tu ne peux pas répondre pour la raison suivante : ", test_completion

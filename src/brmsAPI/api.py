@@ -2,7 +2,7 @@ import requests
 import json
 
 class ApiCall:
-    def __init__(self, url, payload, headers):
+    def __init__(self, url:str, payload:json, headers:dict):
         self.url = url
         self.payload = payload
         self.headers = headers
@@ -26,8 +26,8 @@ class ApiCall:
             print("Il manque l'adresse du client pour répondre")
 
 if __name__ == "__main__":
-    
-    url = "http://localhost:9090/DecisionService/rest/v1/assurance_deploy/OD_assurance/"
+    # appelle de l'url de ma machine
+    url = "http://10.21.8.3:9090/DecisionService/rest/v1/assurance_deploy/OD_assurance/"
     
     payload = {
         "__DecisionID__": "exampleID",
@@ -37,7 +37,7 @@ if __name__ == "__main__":
                 {
                     "nom": "Dupont",
                     "prenom": "Jean",
-                    "age": 23,
+                    "age": 53,
                     "adresse": "123 Rue Exemple, Paris"
                 }
             ],
