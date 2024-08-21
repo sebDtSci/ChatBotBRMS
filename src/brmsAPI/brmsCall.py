@@ -29,13 +29,19 @@ def brmsCall(user_input:str)->str:
     elements2 = re.sub(r'[^a-zA-Z0-9;]', '', elements["response"])
     elements3 = [elem.strip() for elem in elements2.split(';') if elem.strip()]
     print("2: ------------------------------------------------>>>>>>------------------------------------------------>>>>>>",elements3)
-    payload = pc.payload_construction(nom=elements3[0], prenom=elements3[1], age=elements3[2], adresse=elements3[3])
+    # payload = pc.payload_construction(nom=elements3[0], prenom=elements3[1], age=elements3[2], adresse=elements3[3])
+    payload = pc.payload_construction(
+        nom=elements3[0] if len(elements3) > 0 and elements3[0] else None,
+        prenom=elements3[1] if len(elements3) > 1 and elements3[1] else None,
+        age=elements3[2] if len(elements3) > 2 and elements3[2] else None,
+        adresse=elements3[3] if len(elements3) > 3 and elements3[3] else None
+    )
     
     api = ap.ApiCall(url="http://10.21.8.3:9090/DecisionService/rest/v1/assurance_deploy/OD_assurance/", payload=payload, headers={'Content-Type': 'application/json'})
-    test_completion = api.test_arguments()
+    test_completion, erreur = api.test_arguments()
     print("3: ------------------------------------------------>>>>>>", test_completion)
-    if test_completion is not None:
-        sentence = "Tu dois indiquer à ton interlocuteur que tu ne peux pas répondre pour la raison suivante : ", test_completion, "Il dois ipérativement te donner touteslesinformations dans l'ordre si possible"
+    if erreur:
+        sentence = "Tu dois indiquer à ton interlocuteur que tu ne peux pas répondre pour la raison suivante : ", test_completion, "Il dois ipérativement te donner toutes les informations dans l'ordre si possible. \n\n Répond uniquement que tu ne peux pas répondre sans ces informations primordiales! Aide toi des raisons données pour expliquer. \n\n Il doit impérativement te redonner toutes les informations ! Nom, Prénom, Age, Adresse "
         solve = False
     else:
         sentence = "D'après les informations que tu as renseignée le prix de l'assurance calculer par le model est : ", api.call_api()

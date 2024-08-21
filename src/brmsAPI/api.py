@@ -19,12 +19,19 @@ class ApiCall:
             print("Response:", response.json())
             
     def test_arguments(self):
+        probl = []
         if self.payload["contract"]["clients"][0]["nom"] is None:
-            print("Il manque le nom du client pour répondre")
-        if self.payload["contract"]["clients"][0]["age"] is None:
-            print("Il manque l'âge du client pour répondre")
+            probl.append("Il manque le nom du client pour répondre")
+        if self.payload["contract"]["clients"][0]["age"] == 0 or self.payload["contract"]["clients"][0]["age"] is None:
+            probl.append("Il manque l'âge du client pour répondre")
         if self.payload["contract"]["clients"][0]["adresse"] is None:
-            print("Il manque l'adresse du client pour répondre")
+            probl.append("Il manque l'adresse du client pour répondre")
+        if len(probl) != 0:
+            erreur = True
+        else:
+            erreur = False
+        print(probl, erreur)
+        return probl, erreur
 
 if __name__ == "__main__":
     # appelle de l'url de ma machine

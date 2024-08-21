@@ -1,7 +1,6 @@
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/__pycache__/saveConversation.cpython-312.pyc', wd=2, mask=IN_OPEN, cookie=0, name='saveConversation.cpython-312.pyc'>
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): us-api.i.posthog.com:443
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/__init__.py', wd=1, mask=IN_OPEN, cookie=0, name='__init__.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/memory.py', wd=1, mask=IN_OPEN, cookie=0, name='memory.py'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag/__pycache__', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name='__pycache__'>
@@ -24,38 +23,36 @@ DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/__pycache__', wd=2, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/__init__.py', wd=3, mask=IN_OPEN, cookie=0, name='__init__.py'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/__init__.py', wd=1, mask=IN_OPEN, cookie=0, name='__init__.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/api.py', wd=3, mask=IN_OPEN, cookie=0, name='api.py'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/api.py', wd=1, mask=IN_OPEN, cookie=0, name='api.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=1, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/api.py', wd=3, mask=IN_OPEN, cookie=0, name='api.py'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=3, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=1, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/brmsCall.py', wd=3, mask=IN_OPEN, cookie=0, name='brmsCall.py'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/brmsCall.py', wd=1, mask=IN_OPEN, cookie=0, name='brmsCall.py'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/generateS.py', wd=1, mask=IN_OPEN, cookie=0, name='generateS.py'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/saveConversation.py', wd=1, mask=IN_OPEN, cookie=0, name='saveConversation.py'>
-DEBUG:urllib3.connectionpool:https://us-api.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
+DEBUG:urllib3.connectionpool:https://us-api.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
 DEBUG:httpcore.connection:connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
-DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7a69c02f25a0>
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x75dc493ed730>
 DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:send_request_headers.complete
 DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:send_request_body.complete
 DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
-DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Wed, 21 Aug 2024 10:17:26 GMT'), (b'Transfer-Encoding', b'chunked')])
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Wed, 21 Aug 2024 14:30:42 GMT'), (b'Transfer-Encoding', b'chunked')])
 INFO:httpx:HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
 DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:receive_response_body.complete
 DEBUG:httpcore.http11:response_closed.started
 DEBUG:httpcore.http11:response_closed.complete
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.21.8.3:9090
-DEBUG:urllib3.connectionpool:http://10.21.8.3:9090 "POST /DecisionService/rest/v1/assurance_deploy/OD_assurance/ HTTP/1.1" 200 149
 INFO:root:Response generated. with model : openchat:latest
 DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:send_request_headers.complete
 DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:send_request_body.complete
 DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
-DEBUG:urllib3.connectionpool:https://us-api.i.posthog.com:443 "POST /batch/ HTTP/1.1" 200 15
-DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Wed, 21 Aug 2024 10:17:27 GMT'), (b'Transfer-Encoding', b'chunked')])
+DEBUG:urllib3.connectionpool:https://us-api.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Wed, 21 Aug 2024 14:30:44 GMT'), (b'Transfer-Encoding', b'chunked')])
 INFO:httpx:HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
 DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:receive_response_body.complete
@@ -64,27 +61,27 @@ DEBUG:httpcore.http11:response_closed.complete
 DEBUG:httpcore.connection:close.started
 DEBUG:httpcore.connection:close.complete
 DEBUG:httpcore.connection:connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
-DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7a69c01f0b90>
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x75dc493ed520>
 DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:send_request_headers.complete
 DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:send_request_body.complete
 DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
-DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Wed, 21 Aug 2024 10:18:06 GMT'), (b'Transfer-Encoding', b'chunked')])
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=utf-8'), (b'Date', b'Wed, 21 Aug 2024 14:31:14 GMT'), (b'Transfer-Encoding', b'chunked')])
 INFO:httpx:HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
 DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:receive_response_body.complete
 DEBUG:httpcore.http11:response_closed.started
 DEBUG:httpcore.http11:response_closed.complete
 DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 10.21.8.3:9090
-DEBUG:urllib3.connectionpool:http://10.21.8.3:9090 "POST /DecisionService/rest/v1/assurance_deploy/OD_assurance/ HTTP/1.1" 200 151
+DEBUG:urllib3.connectionpool:http://10.21.8.3:9090 "POST /DecisionService/rest/v1/assurance_deploy/OD_assurance/ HTTP/11" 200 152
 INFO:root:Response generated. with model : openchat:latest
 DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:send_request_headers.complete
 DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:send_request_body.complete
 DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
-DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Wed, 21 Aug 2024 10:18:08 GMT'), (b'Transfer-Encoding', b'chunked')])
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Wed, 21 Aug 2024 14:31:16 GMT'), (b'Transfer-Encoding', b'chunked')])
 INFO:httpx:HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
 DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
 DEBUG:httpcore.http11:receive_response_body.complete
@@ -93,253 +90,6 @@ DEBUG:httpcore.http11:response_closed.complete
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=3, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=1, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=3, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=1, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=3, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=1, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=1, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=3, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=3, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=1, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=3, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI/payload_construction.py', wd=1, mask=IN_OPEN, cookie=0, name='payload_construction.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/memory.py', wd=1, mask=IN_OPEN, cookie=0, name='memory.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/memory.py', wd=1, mask=IN_OPEN, cookie=0, name='memory.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/memory.py', wd=1, mask=IN_OPEN, cookie=0, name='memory.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/generateS.py', wd=1, mask=IN_OPEN, cookie=0, name='generateS.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/generateS.py', wd=1, mask=IN_MODIFY, cookie=0, name='generateS.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/generateS.py', wd=1, mask=IN_MODIFY, cookie=0, name='generateS.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/generateS.py', wd=1, mask=IN_OPEN, cookie=0, name='generateS.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/generateS.py', wd=1, mask=IN_CLOSE_WRITE, cookie=0, name='generateS.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/generateS.py', wd=1, mask=IN_OPEN, cookie=0, name='generateS.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/generateS.py', wd=1, mask=IN_OPEN, cookie=0, name='generateS.py'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
@@ -355,34 +105,29 @@ DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+INFO:root:Response generated. with model : openchat:latest
+DEBUG:httpcore.connection:close.started
+DEBUG:httpcore.connection:close.complete
+DEBUG:httpcore.connection:connect_tcp.started host='127.0.0.1' port=11434 local_address=None timeout=None socket_options=None
+DEBUG:httpcore.connection:connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x75dc493ed160>
+DEBUG:httpcore.http11:send_request_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_headers.complete
+DEBUG:httpcore.http11:send_request_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:send_request_body.complete
+DEBUG:httpcore.http11:receive_response_headers.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/x-ndjson'), (b'Date', b'Wed, 21 Aug 2024 14:31:45 GMT'), (b'Transfer-Encoding', b'chunked')])
+INFO:httpx:HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+DEBUG:httpcore.http11:receive_response_body.started request=<Request [b'POST']>
+DEBUG:httpcore.http11:receive_response_body.complete
+DEBUG:httpcore.http11:response_closed.started
+DEBUG:httpcore.http11:response_closed.complete
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
@@ -398,22 +143,8 @@ DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
@@ -422,10 +153,69 @@ DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
-DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
@@ -433,5 +223,12 @@ DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='brmsAPI'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='rag'>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=4, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/rag', wd=1, mask=IN_IGNORED, cookie=0, name=''>
 DEBUG:watchdog.observers.inotify_buffer:in-event <InotifyEvent: src_path=b'/home/useria/Documents/pytestLLM/ChatBotBRMS/src/brmsAPI', wd=1, mask=IN_IGNORED, cookie=0, name=''>

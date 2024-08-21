@@ -3,7 +3,10 @@ import logging
 import streamlit as st
 import os
 
-from src.memory import ChatbotMemory, memory_counter, compressed_memory
+from shortterm_memory.ChatbotMemory import ChatbotMemory
+# from Memory import ChatbotMemory
+
+
 from src.rag.new_chromadb import rag_pipeline
 
 #BRMS integration
@@ -58,6 +61,7 @@ class Generate:
         """
         # Initialisation
         self.assurance_phase = False
+        solve_statue = False
         self.running = True
         self.response = ""
         print("MEm de conversation_history : ",self.memory.get_memory())
@@ -108,14 +112,5 @@ class Generate:
             user_input = clear_dialog_element(user_input, liste_element)
             
         self.memory.update_memory(user_input, self.response)
-
-        # TODO: effectuer cette tache en async pour eviter qu'elle ne ralentisse tout le processus 
-        if memory_counter(self.memory.get_memory()) > 500 and self.suma_on_run == False:
-            self.suma_on_run = True
-            print("Conversation_history : ",self.memory.get_memory())
-            self.memory = ChatbotMemory(compressed_memory(self.memory.get_memory()))
-            print("Compressed conversation_history : ",self.memory.get_memory())
-            self.suma_on_run = False
-            logging.info("Memory compressed.")
 
         self.running = False
