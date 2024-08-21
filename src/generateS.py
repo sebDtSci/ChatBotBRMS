@@ -1,14 +1,15 @@
 import ollama
 import logging
-import re
+import streamlit as st
+import os
 
 from src.memory import ChatbotMemory, memory_counter, compressed_memory
 from src.rag.new_chromadb import rag_pipeline
+
+#BRMS integration
 import src.brmsAPI.api as ap
 import src.brmsAPI.payload_construction as pc
-
-import streamlit as st
-import os
+from src.brmsAPI.brmsCall import brmsCall, clear_dialog_element
 
 # Désactiver le parallélisme pour éviter les deadlocks
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -66,46 +67,8 @@ class Generate:
         # BRMS Integration #
         ####################
         if "assurance" in user_input:
-            
             self.assurance_phase = True
-
-            # payload = {"__DecisionID__": "exampleID","contract": {"id": 12345,"clients": [{"nom": nom,"prenom": prenom,"age": age,"adresse": adresse}],"montant": 0}}
-            request = (
-                "Tu es un expêrt en data capture, ton role est d'extraire uniquement les données requises.\n\n"
-                "Extrait les informations au format liste suivant :\n Nom ; Prenom ; Age ; Adresse.\n\n."
-                "Si il y a des informations manquantes laisse les zonnes vides.\n\n"
-                "Si il y a des données manquantes n'écris rien, laise vide.\n\n"
-                "Ne répond rien d'autre que la liste. Nom ; Prenom ; Age ; Adresse] .\n\n"
-                "Voici quelques exemples pour te montrer: \n\n"
-                "Exemple numéro 1; utilisateur:'Je veux une information sur une assurance, il s'agit de madame Durant Jenny' reponse:Durant ; Jenny.\n\n"
-                "Exemple numéro 2; utilisateur:'Nous voulons les données d'assurance de monsieur Alexandre Gigof agé de 56 ans et résident au 6 rue labradore, Paris' reponse: Gigof ; Alexandre ; 56 ; 6 rue labradore, Paris .\n\n"
-                "Exemple numéro 3; utilisateur:'' reponse: .\n\n"
-                "Exemple numéro 4; utilisateur:'j'aurais une question sur l assurance' reponse: .\n\n"
-                "Voici la phrase cible: " f"{user_input}"
-                )
-            
-            elements = ollama.generate(
-                # model=self.model,
-                model="mistral:latest",
-                prompt=request,
-                stream=False,
-                options=self._ollama_option
-            )
-            print("------------------------------------------------>>>>>>------------------------------------------------>>>>>>",elements["response"])
-            
-            elements2 = re.sub(r'[^a-zA-Z0-9;]', '', elements["response"])
-            elements3 = elements2.split(';')
-            print(elements3)
-            print(elements3[0])
-            payload = pc.payload_construction(nom=elements3[0], prenom=elements3[1], age=elements3[2], adresse=elements3[3])
-            
-            api = ap.ApiCall(url="http://10.21.8.3:9090/DecisionService/rest/v1/assurance_deploy/OD_assurance/", payload=payload, headers={'Content-Type': 'application/json'})
-            test_completion = api.test_arguments()
-            print("------------------------------------------------>>>>>>", test_completion)
-            if test_completion is not None:
-                sentence = "Tu dois indiquer à ton interlocuteur que tu ne peux pas répondre pour la raison suivante : ", test_completion
-            else:
-                sentence = "D'après les informations que tu as renseignée la réponse est : ", api.call_api()
+            sentence, liste_element, solve_statue = brmsCall(user_input)
         ####################
         
         context = rag_pipeline(query=user_input)
@@ -129,7 +92,6 @@ class Generate:
         result = ollama.generate(
             model=self.model,
             prompt=prompt,
-            # stream=False,
             stream=True,
             options=self._ollama_option
         )
@@ -141,6 +103,10 @@ class Generate:
             self.response += chunk['response']
             yield chunk['response']
         
+        # clean user_input to avoid any confusion and recall assurance entity
+        if solve_statue:
+            user_input = clear_dialog_element(user_input, liste_element)
+            
         self.memory.update_memory(user_input, self.response)
 
         # TODO: effectuer cette tache en async pour eviter qu'elle ne ralentisse tout le processus 

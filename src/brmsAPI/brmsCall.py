@@ -1,0 +1,52 @@
+import ollama
+import re
+import src.brmsAPI.payload_construction as pc
+import src.brmsAPI.api as ap
+
+def brmsCall(user_input:str)->str:
+    request = (
+                "Tu es un expêrt en data capture, ton role est d'extraire uniquement les données requises.\n\n"
+                "Extrait les informations au format liste suivant :\n Nom ; Prenom ; Age ; Adresse.\n\n."
+                "Si il y a des informations manquantes laisse les zonnes vides.\n\n"
+                "Si il y a des données manquantes n'écris rien, laise vide.\n\n"
+                "Ne répond rien d'autre que la liste. Nom ; Prenom ; Age ; Adresse] .\n\n"
+                "Voici quelques exemples pour te montrer: \n\n"
+                "Exemple numéro 1; utilisateur:'Je veux une information sur une assurance, il s'agit de madame Durant Jenny' reponse:Durant ; Jenny.\n\n"
+                "Exemple numéro 2; utilisateur:'Nous voulons les données d'assurance de monsieur Alexandre Gigof agé de 56 ans et résident au 6 rue labradore, Paris' reponse: Gigof ; Alexandre ; 56 ; 6 rue labradore, Paris .\n\n"
+                "Exemple numéro 3; utilisateur:'' reponse: .\n\n"
+                "Exemple numéro 4; utilisateur:'j'aurais une question sur l assurance' reponse: .\n\n"
+                "Voici la phrase cible: " f"{user_input}"
+                )
+            
+    elements = ollama.generate(
+        model="mistral:latest",
+        prompt=request,
+        stream=False,
+        options= {'temperature': 1}
+    )
+    print("1 : ------------------------------------------------>>>>>>------------------------------------------------>>>>>>------------------------------------------------>>>>>>",elements["response"])
+    
+    elements2 = re.sub(r'[^a-zA-Z0-9;]', '', elements["response"])
+    elements3 = [elem.strip() for elem in elements2.split(';') if elem.strip()]
+    print("2: ------------------------------------------------>>>>>>------------------------------------------------>>>>>>",elements3)
+    payload = pc.payload_construction(nom=elements3[0], prenom=elements3[1], age=elements3[2], adresse=elements3[3])
+    
+    api = ap.ApiCall(url="http://10.21.8.3:9090/DecisionService/rest/v1/assurance_deploy/OD_assurance/", payload=payload, headers={'Content-Type': 'application/json'})
+    test_completion = api.test_arguments()
+    print("3: ------------------------------------------------>>>>>>", test_completion)
+    if test_completion is not None:
+        sentence = "Tu dois indiquer à ton interlocuteur que tu ne peux pas répondre pour la raison suivante : ", test_completion, "Il dois ipérativement te donner touteslesinformations dans l'ordre si possible"
+        solve = False
+    else:
+        sentence = "D'après les informations que tu as renseignée le prix de l'assurance calculer par le model est : ", api.call_api()
+        solve = True
+    
+    print(solve)
+    
+    return sentence, elements3, solve
+
+def clear_dialog_element(input:str, liste_element:list)->str:
+    liste_element.append('assurance')
+    clear_input = [element for element in input[0].split() if not element in liste_element]
+    
+    return " ".join(clear_input)
