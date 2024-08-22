@@ -3,16 +3,12 @@ import logging
 import streamlit as st
 import os
 
+# ChatBot integration
 from shortterm_memory.ChatbotMemory import ChatbotMemory
-# from Memory import ChatbotMemory
-
-
 from src.rag.new_chromadb import rag_pipeline
 
 #BRMS integration
-import src.brmsAPI.api as ap
-import src.brmsAPI.payload_construction as pc
-from src.brmsAPI.brmsCall import brmsCall, clear_dialog_element
+from src.brmsAPI.brmsAssurance import brmsCall, clear_dialog_element
 
 # Désactiver le parallélisme pour éviter les deadlocks
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
