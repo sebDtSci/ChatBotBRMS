@@ -14,7 +14,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     ca-certificates \
     openssh-server \
     # libnvidia-compute-460 \
-    pysqlite3-binary \
+    # pysqlite3-binary \
     && ln -s /usr/bin/python3 /usr/bin/python \
     && rm -rf /var/lib/apt/lists/* 
 
