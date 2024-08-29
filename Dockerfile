@@ -13,7 +13,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     curl \
     ca-certificates \
     openssh-server \
-    libnvidia-compute-460 \
+    # libnvidia-compute-460 \
+    libsqlite3-dev \
     && ln -s /usr/bin/python3 /usr/bin/python \
     && rm -rf /var/lib/apt/lists/* 
 
@@ -23,11 +24,11 @@ RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/
 # SSH login fix. Otherwise user is kicked off after login
 RUN sed -i 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' /etc/pam.d/sshd
 
-WORKDIR /app
+# WORKDIR /app
 
-COPY . app/
-# RUN pip install --no-cache-dir -r app/requirements.txt
+COPY . .
+RUN pip install --no-cache-dir -r requirements.txt
 
-EXPOSE 5000
+EXPOSE 8501
 
 CMD ["python3", "main.py"]
