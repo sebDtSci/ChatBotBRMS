@@ -13,6 +13,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     curl \
     ca-certificates \
     openssh-server \
+    libnvidia-compute-460 \
+    && ln -s /usr/bin/python3 /usr/bin/python \
     && rm -rf /var/lib/apt/lists/* 
 
 RUN mkdir /var/run/sshd
@@ -28,4 +30,4 @@ COPY . app/
 
 EXPOSE 5000
 
-CMD ["python", "main.py"]
+CMD ["python3", "main.py"]
