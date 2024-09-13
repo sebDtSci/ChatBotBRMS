@@ -8,13 +8,15 @@ def brmsCall(user_input:str)->str:
                 "Tu es un expêrt en data capture, ton role est d'extraire uniquement les données requises.\n\n"
                 "Extrait les informations au format liste suivant :\n Nom ; Prenom ; Age ; Adresse.\n\n."
                 "Si il y a des informations manquantes laisse les zonnes vides.\n\n"
-                "Si il y a des données manquantes n'écris rien, laise vide.\n\n"
-                "Ne répond rien d'autre que la liste. Nom ; Prenom ; Age ; Adresse] .\n\n"
+                "Si il y a des données manquantes n'écris rien, laisse vide.\n\n"
+                "Ne répond rien d'autre que la liste. Nom ; Prenom ; Age ; Adresse .\n\n"
                 "Voici quelques exemples pour te montrer: \n\n"
-                "Exemple numéro 1; utilisateur:'Je veux une information sur une assurance, il s'agit de madame Durant Jenny' reponse:Durant ; Jenny.\n\n"
+                "Exemple numéro 1; utilisateur:'Je veux une information sur une assurance, il s'agit de madame Durant Jenny' reponse: Durant ; Jenny.\n\n"
                 "Exemple numéro 2; utilisateur:'Nous voulons les données d'assurance de monsieur Alexandre Gigof agé de 56 ans et résident au 6 rue labradore, Paris' reponse: Gigof ; Alexandre ; 56 ; 6 rue labradore, Paris .\n\n"
                 "Exemple numéro 3; utilisateur:'' reponse: .\n\n"
                 "Exemple numéro 4; utilisateur:'j'aurais une question sur l assurance' reponse: .\n\n"
+                "Exemple numéro 5; utilisateur:'Pardon, elle a 65 ans et vie au 34 rue du chaine, Paris + ces éléments ont déjà été mentionné et sont à retenir pour l'assurance : ['Desmons', 'Clara']' reponse: Desmons ; Clara ; 65 ; 34 rue du chaine, Paris  .\n\n"
+                "Exemple numéro 6; utilisateur:'Elle s'appelle Corrine Petit + ces éléments ont déjà été mentionné et sont à retenir pour l'assurance : ['87', '9 bis rue moineau, Montpellier']' reponse: Petit ; Corrine ; 87 ; 9 bis rue moineau, Montpellier  .\n\n"
                 "Voici la phrase cible: " f"{user_input}"
                 )
             
