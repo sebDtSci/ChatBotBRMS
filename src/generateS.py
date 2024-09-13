@@ -2,6 +2,7 @@ import ollama
 import logging
 import streamlit as st
 import os
+from ReflectionTuning import GenerateReflexion
 
 # ChatBot integration
 from shortterm_memory.ChatbotMemory import ChatbotMemory
@@ -25,6 +26,7 @@ class Generate:
         self.response = ""
         self.suma_on_run = False
         self.assurance_phase = False
+        self.internal_reflextion = GenerateReflexion(model='openchat:latest')
     
     def remember(self, sauvegarde)-> None:
         """
@@ -45,7 +47,7 @@ class Generate:
             st.sidebar.error(f"Error : {e}")
         
 
-    def ans(self, user_input="l'assurance de manon qui à 34 ans et qui habite à paris"): # Debug modification
+    def ans(self, user_input:str):#user_input="l'assurance de manon qui à 34 ans et qui habite à paris"): # Debug modification
         """
         Generates a response from the Chatbot based on the user input and updates the Chatbot's memory.
 
@@ -62,7 +64,7 @@ class Generate:
         self.response = ""
         print("MEm de conversation_history : ",self.memory.get_memory())
         
-        
+        reflexion_input = self.internal_reflextion.gen(user_input,self.memory.get_memory())
         ####################
         # BRMS Integration #
         ####################
@@ -87,7 +89,11 @@ class Generate:
             "Question de l'utilisateur :\n"
             f"{user_input}\n\n"
             f"{assurance_output}\n\n"
-            "Répondez de manière claire et concise :\n"
+            "Voici les étapes de reflexion donné par l'agent dédié au 'Reflection-Tuning' qui pourrait t'aider à répondre.\n"
+            "Ces instructions ne sont que pour toi ne les dévoile pas :\n"
+            "Tu peux en tenir compte ou les ignorer :\n"
+            f"{reflexion_input}\n\n"
+            "Répondez de manière claire et concise et avec une mise en forme lisible :\n"
         )
         result = ollama.generate(
             model=self.model,
