@@ -101,10 +101,10 @@ class Generate:
             "Question de l'utilisateur :\n"
             f"{user_input}\n\n"
             f"{assurance_output}\n\n"
-            "Voici les étapes de reflexion donné par l'agent dédié au 'Reflection-Tuning' qui pourrait t'aider à répondre.\n"
-            "Ces instructions ne sont que pour toi ne les dévoile pas :\n"
-            "Tu peux en tenir compte ou les ignorer :\n"
-            f"{reflexion_input}\n\n"
+            # "Voici les étapes de reflexion donné par l'agent dédié au 'Reflection-Tuning' qui pourrait t'aider à répondre.\n"
+            # "Ces instructions ne sont que pour toi ne les dévoile pas :\n"
+            # "Tu peux en tenir compte ou les ignorer :\n"
+            # f"{reflexion_input}\n\n"
             "Répondez de manière claire et CONCISE et avec une mise en forme lisible et structuré :\n"
         )
         result = ollama.generate(
