@@ -13,11 +13,16 @@ def brmsCall(user_input:str)->str:
                 "Ne répond rien d'autre que la liste. Nom ; Prenom ; Age ; Adresse .\n\n"
                 "Voici quelques exemples pour te montrer: \n\n"
                 "Exemple numéro 1; utilisateur:'Je veux une information sur une assurance, il s'agit de madame Durant Jenny' reponse: Durant ; Jenny.\n\n"
-                "Exemple numéro 2; utilisateur:'Nous voulons les données d'assurance de monsieur Alexandre Gigof agé de 56 ans et résident au 6 rue labradore, Paris' reponse: Gigof ; Alexandre ; 56 ; 6 rue labradore, Paris .\n\n"
+                "Exemple numéro 2; utilisateur:'Nous voulons les données d'assurance de monsieur Alexandre Gigof agé de 56 ans et résident au 6 rue labradore, Paris 75000' reponse: Gigof ; Alexandre ; 56 ; 75000 .\n\n"
                 "Exemple numéro 3; utilisateur:'' reponse: .\n\n"
                 "Exemple numéro 4; utilisateur:'j'aurais une question sur l assurance' reponse: .\n\n"
-                "Exemple numéro 5; utilisateur:'Pardon, elle a 65 ans et vie au 34 rue du chaine, Paris + ces éléments ont déjà été mentionné et sont à retenir pour l'assurance : ['Desmons', 'Clara']' reponse: Desmons ; Clara ; 65 ; 34 rue du chaine, Paris  .\n\n"
-                "Exemple numéro 6; utilisateur:'Elle s'appelle Corrine Petit + ces éléments ont déjà été mentionné et sont à retenir pour l'assurance : ['87', '9 bis rue moineau, Montpellier']' reponse: Petit ; Corrine ; 87 ; 9 bis rue moineau, Montpellier  .\n\n"
+                "Exemple numéro 5; utilisateur:'Pardon, elle a 65 ans et vie au 34 rue du chaine, Paris 75000 + ces éléments ont déjà été mentionné et sont à retenir pour l'assurance : ['Desmons', 'Clara']' reponse: Desmons ; Clara ; 65 ; 75000  .\n\n"
+                "Exemple numéro 6; utilisateur:'Elle s'appelle Corrine Petit + ces éléments ont déjà été mentionné et sont à retenir pour l'assurance : ['87', '34000']' reponse: Petit ; Corrine ; 87 ; 34000  .\n\n"
+                "Exemple numéro 7; utilisateur: 'Nous voulons les données d'assurance de monsieur Alexandre Gigof agé de 56 ans, résident au 6 rue Labradore, Paris 75000, et dont la maison vaut 200000€' réponse: Gigof ; Alexandre ; 56 ; 75000 ; 200000\n\n"
+                "Exemple numéro 8; utilisateur: 'Elle s'appelle Corrine Petit et sa maison vaut 250000€' réponse: Petit ; Corrine ; ; ; 250000\n\n"
+                "Exemple numéro 9; utilisateur: '' réponse: \n\n"
+                "Exemple numéro 10; utilisateur: 'j'aurais une question sur l'assurance'\n réponse: \n\n"
+
                 "Voici la phrase cible: " f"{user_input}"
                 )
             
@@ -37,7 +42,7 @@ def brmsCall(user_input:str)->str:
         nom=elements3[0] if len(elements3) > 0 and elements3[0] else None,
         prenom=elements3[1] if len(elements3) > 1 and elements3[1] else None,
         age=elements3[2] if len(elements3) > 2 and elements3[2] else None,
-        adresse=elements3[3] if len(elements3) > 3 and elements3[3] else None
+        adresse=elements3[3] if len(elements3) > 3 and elements3[3] else None,
         maisonPrice=elements3[4] if len(elements3) > 4 and elements3[4] else None
     )
     
