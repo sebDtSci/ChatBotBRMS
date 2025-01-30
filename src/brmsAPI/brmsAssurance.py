@@ -22,6 +22,13 @@ def brmsCall(user_input:str)->str:
                 "Exemple numéro 8; utilisateur: 'Elle s'appelle Corrine Petit et sa maison vaut 250000€' réponse: Petit ; Corrine ; ; ; 250000\n\n"
                 "Exemple numéro 9; utilisateur: '' réponse: \n\n"
                 "Exemple numéro 10; utilisateur: 'j'aurais une question sur l'assurance'\n réponse: \n\n"
+                "Exemple numéro 11; utilisateur: 'Salut, je voudrais des renseignements sur l'assurance d'Alice Golen, qui a 24 ans et qui vie au 4 rue peroque, à paris 75000, sa maison vaut 20000 euros'\n réponse: Golen ; Alice ; 24 ; 75000 ; 20000\n\n"
+
+                "Exemple numéro 12; Utilisateur : “Nous devons enregistrer les informations pour l’assurance de monsieur Jean Dupont, qui a 43 ans et habite au 12 avenue des Champs, Lyon 69000. Il possède une maison d’une valeur de 300000€.” Réponse : Dupont ; Jean ; 43 ; 69000 ; 300000"
+                "Exemple numéro 13; Utilisateur : “Madame Louise Martin souhaite souscrire une assurance. Elle a 52 ans et vit au 78 boulevard Haussmann, Paris 75008.” Réponse : Martin ; Louise ; 52 ; 75008"
+                "Exemple numéro 14; Utilisateur : “Je veux une assurance pour ma tante, elle s’appelle Sophie Lemaitre et réside à Bordeaux, 33000.” Réponse : Lemaitre ; Sophie ; ; 33000"
+                "Exemple numéro 15; Utilisateur : “Il faut une assurance habitation pour monsieur Paul Lefebvre, qui vit à Nice, 06000, et dont la maison vaut 180000€.” Réponse : Lefebvre ; Paul ; ; 06000 ; 180000"
+                "Exemple numéro 16; Utilisateur : “Je cherche une assurance pour Alice Dubois, qui a 37 ans et vit à Marseille, 13001.” Réponse : Dubois ; Alice ; 37 ; 13001"
 
                 "Voici la phrase cible: " f"{user_input}"
                 )
