@@ -1,18 +1,13 @@
-
-def payload_construction(nom,prenom,age,adresse):
+def payload_construction(nom:str,prenom:str,age:int,adresse:str, maisonPrice:int):
+    
     payload = {
-            "__DecisionID__": "exampleID",
-            "contract": {
-                "id": 12345,
-                "clients": [
-                    {
-                        "nom": nom,
-                        "prenom": prenom,
-                        "age": age,
-                        "adresse": adresse
-                    }
-                ],
-                "montant": 0
+        "personne": {
+            "name": prenom,
+            "lastName": nom,
+            "address": adresse,
+            "disaster": "Incendie",
+            "age": age,
+            "maisonPrice": maisonPrice
             }
         }
 

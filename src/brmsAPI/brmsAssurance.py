@@ -4,6 +4,7 @@ import src.brmsAPI.payload_construction as pc
 import src.brmsAPI.api as ap
 
 def brmsCall(user_input:str)->str:
+    #TODO: refactoriser cette fonction avec "maisonPrice" !
     request = (
                 "Tu es un expêrt en data capture, ton role est d'extraire uniquement les données requises.\n\n"
                 "Extrait les informations au format liste suivant :\n Nom ; Prenom ; Age ; Adresse.\n\n."
@@ -37,6 +38,7 @@ def brmsCall(user_input:str)->str:
         prenom=elements3[1] if len(elements3) > 1 and elements3[1] else None,
         age=elements3[2] if len(elements3) > 2 and elements3[2] else None,
         adresse=elements3[3] if len(elements3) > 3 and elements3[3] else None
+        maisonPrice=elements3[4] if len(elements3) > 4 and elements3[4] else None
     )
     
     api = ap.ApiCall(url="http://10.21.8.3:9090/DecisionService/rest/v1/assurance_deploy/OD_assurance/", payload=payload, headers={'Content-Type': 'application/json'})
