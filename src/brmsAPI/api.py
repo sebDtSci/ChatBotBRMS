@@ -20,12 +20,14 @@ class ApiCall:
             
     def test_arguments(self):
         probl = []
-        if self.payload["contract"]["clients"][0]["nom"] is None:
+        if self.payload["personne"]["name"] is None:
             probl.append("Il manque le nom du client pour répondre")
-        if self.payload["contract"]["clients"][0]["age"] == 0 or self.payload["contract"]["clients"][0]["age"] is None:
+        if self.payload["personne"]["age"] == 0 or self.payload["personne"]["age"] is None:
             probl.append("Il manque l'âge du client pour répondre")
-        if self.payload["contract"]["clients"][0]["adresse"] is None:
+        if self.payload["personne"]["address"] is None:
             probl.append("Il manque l'adresse du client pour répondre")
+        if self.payload["personne"]["maisonPrice"] == 0 or self.payload["personne"]["maisonPrice"] is None:
+            probl.append("Il manque le prix de la maison du client pour répondre")
         if len(probl) != 0:
             erreur = True
         else:
@@ -35,23 +37,18 @@ class ApiCall:
 
 if __name__ == "__main__":
     # appelle de l'url de ma machine
-    url = "http://10.21.8.3:9090/DecisionService/rest/v1/assurance_deploy/OD_assurance/"
+    url = 'http://localhost:8080/ruleflow'
     
     payload = {
-        "__DecisionID__": "exampleID",
-        "contract": {
-            "id": 12345,
-            "clients": [
-                {
-                    "nom": "Dupont",
-                    "prenom": "Jean",
-                    "age": 53,
-                    "adresse": "123 Rue Exemple, Paris"
-                }
-            ],
-            "montant": 0
-        }
-    }
+  "personne": {
+    "name": "Alice",
+    "lastName": "Corez",
+    "address": "34000",
+    "disaster": "Incendie",
+    "age": 23,
+    "maisonPrice": 20000
+  }
+}
     headers = {'Content-Type': 'application/json'}
 
     api = ApiCall(url, payload, headers)
