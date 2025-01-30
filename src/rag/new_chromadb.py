@@ -3,7 +3,7 @@ import os
 import time
 import chromadb
 from chromadb.config import Settings
-from src.rag.document_reader import reader
+from rag.document_reader import reader
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import numpy as np

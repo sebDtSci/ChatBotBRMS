@@ -1,7 +1,7 @@
 import ollama
 import re
-import src.brmsAPI.payload_construction as pc
-import src.brmsAPI.api as ap
+import brmsAPI.payload_construction as pc
+import brmsAPI.api as ap
 
 def brmsCall(user_input:str)->str:
     #TODO: refactoriser cette fonction avec "maisonPrice" !
@@ -53,13 +53,15 @@ def brmsCall(user_input:str)->str:
         maisonPrice=elements3[4] if len(elements3) > 4 and elements3[4] else None
     )
     
-    api = ap.ApiCall(url="http://10.21.8.3:9090/DecisionService/rest/v1/assurance_deploy/OD_assurance/", payload=payload, headers={'Content-Type': 'application/json'})
+    api = ap.ApiCall(url="http://localhost:8080/ruleflow", payload=payload, headers={'Content-Type': 'application/json'})
+    print('debug API',api)
     test_completion, erreur = api.test_arguments()
     print("3: ------------------------------------------------>>>>>>", test_completion)
     if erreur:
         sentence = "Tu dois indiquer à ton interlocuteur que tu ne peux pas répondre pour la raison suivante : ", test_completion, "Il dois ipérativement te donner toutes les informations dans l'ordre si possible. \n\n Répond uniquement que tu ne peux pas répondre sans ces informations primordiales! Aide toi des raisons données pour expliquer. \n\n Il doit impérativement te redonner toutes les informations ! Nom, Prénom, Age, Adresse "
         solve = False
     else:
+        print(f"debug API . call{api.call_api().get('res', {}).get('montantIndemnisation')}")
         sentence = "D'après les informations que tu as renseignée le prix de l'assurance calculer par le model est : ", api.call_api()
         solve = True
     

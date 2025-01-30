@@ -6,10 +6,10 @@ from ReflectionTuning import GenerateReflexion
 
 # ChatBot integration
 from shortterm_memory.ChatbotMemory import ChatbotMemory
-from src.rag.new_chromadb import rag_pipeline
+from rag.new_chromadb import rag_pipeline
 
 #BRMS integration
-from src.brmsAPI.brmsAssurance import brmsCall, clear_dialog_element
+from brmsAPI.brmsAssurance import brmsCall, clear_dialog_element
 
 # Désactiver le parallélisme pour éviter les deadlocks
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
