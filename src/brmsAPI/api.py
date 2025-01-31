@@ -17,6 +17,7 @@ class ApiCall:
         else:
             print("Failed with status code:", response.status_code)
             print("Response:", response.json())
+            return response.json()
             
     def test_arguments(self):
         probl = []
@@ -54,3 +55,4 @@ if __name__ == "__main__":
     api = ApiCall(url, payload, headers)
     api.test_arguments()
     api.call_api()
+

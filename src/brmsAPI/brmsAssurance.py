@@ -3,6 +3,12 @@ import re
 import brmsAPI.payload_construction as pc
 import brmsAPI.api as ap
 
+def extract_number(s):
+    """Extrait le nombre d'une chaîne de caractères."""
+    match = re.search(r'\d+', s)
+    return int(match.group()) if match else None
+
+
 def brmsCall(user_input:str)->str:
     #TODO: refactoriser cette fonction avec "maisonPrice" !
     request = (
@@ -10,7 +16,7 @@ def brmsCall(user_input:str)->str:
                 "Extrait les informations au format liste suivant :\n Nom ; Prenom ; Age ; Adresse.\n\n."
                 "Si il y a des informations manquantes laisse les zonnes vides.\n\n"
                 "Si il y a des données manquantes n'écris rien, laisse vide.\n\n"
-                "Ne répond rien d'autre que la liste. Nom ; Prenom ; Age ; Adresse .\n\n"
+                "Ne répond rien d'autre que la liste. Nom ; Prenom ; Age ; Adresse ; prixMaison.\n\n"
                 "Voici quelques exemples pour te montrer: \n\n"
                 "Exemple numéro 1; utilisateur:'Je veux une information sur une assurance, il s'agit de madame Durant Jenny' reponse: Durant ; Jenny.\n\n"
                 "Exemple numéro 2; utilisateur:'Nous voulons les données d'assurance de monsieur Alexandre Gigof agé de 56 ans et résident au 6 rue labradore, Paris 75000' reponse: Gigof ; Alexandre ; 56 ; 75000 .\n\n"
@@ -29,6 +35,10 @@ def brmsCall(user_input:str)->str:
                 "Exemple numéro 14; Utilisateur : “Je veux une assurance pour ma tante, elle s’appelle Sophie Lemaitre et réside à Bordeaux, 33000.” Réponse : Lemaitre ; Sophie ; ; 33000"
                 "Exemple numéro 15; Utilisateur : “Il faut une assurance habitation pour monsieur Paul Lefebvre, qui vit à Nice, 06000, et dont la maison vaut 180000€.” Réponse : Lefebvre ; Paul ; ; 06000 ; 180000"
                 "Exemple numéro 16; Utilisateur : “Je cherche une assurance pour Alice Dubois, qui a 37 ans et vit à Marseille, 13001.” Réponse : Dubois ; Alice ; 37 ; 13001"
+                "Exemple numéro 17; Utilisateur : “Je veux une assurance pour monsieur Jacques, qui a 50 ans et vit au 10 rue de la Paix, Paris 75000.” Réponse : ; Jacques ; 50 ; 75000 ;"
+                "Exemple numéro 18; Utilisateur : 'et pour l'assurance de Arthure Grore , qui à 24 ans' Réponse : Grore ; Arthure ; 24 ; ;  "
+                "Example numéro 19; Utilisateur : 'le prix de sa maison est de 100000 et il vit à Paris 75000 + ces éléments ont déjà été mentionné et sont à retenir pour l'assurance : ['Grore', 'Arthure', '24']' reéponse: Grore ; Arthure ; 24 ; 75000 ; 100000"
+
 
                 "Voici la phrase cible: " f"{user_input}"
                 )
@@ -50,7 +60,7 @@ def brmsCall(user_input:str)->str:
         prenom=elements3[1] if len(elements3) > 1 and elements3[1] else None,
         age=elements3[2] if len(elements3) > 2 and elements3[2] else None,
         adresse=elements3[3] if len(elements3) > 3 and elements3[3] else None,
-        maisonPrice=elements3[4] if len(elements3) > 4 and elements3[4] else None
+        maisonPrice= extract_number(elements3[4]) if len(elements3) > 4 and elements3[4] else None
     )
     
     api = ap.ApiCall(url="http://localhost:8080/ruleflow", payload=payload, headers={'Content-Type': 'application/json'})
@@ -61,9 +71,24 @@ def brmsCall(user_input:str)->str:
         sentence = "Tu dois indiquer à ton interlocuteur que tu ne peux pas répondre pour la raison suivante : ", test_completion, "Il dois ipérativement te donner toutes les informations dans l'ordre si possible. \n\n Répond uniquement que tu ne peux pas répondre sans ces informations primordiales! Aide toi des raisons données pour expliquer. \n\n Il doit impérativement te redonner toutes les informations ! Nom, Prénom, Age, Adresse "
         solve = False
     else:
-        print(f"debug API . call{api.call_api().get('res', {}).get('montantIndemnisation')}")
-        sentence = "D'après les informations que tu as renseignée le prix de l'assurance calculer par le model est : ", api.call_api()
-        solve = True
+
+        resApi:dict = api.call_api()  # Appel API
+
+        if isinstance(resApi, dict) and 'res' in resApi:
+            answer = resApi['res'].get('montantIndemnisation', "Indemnisation inconnue")
+        else:
+            answer = "Erreur : réponse invalide de l'API"
+
+        sentence = f"D'après les informations que tu as renseignées, le prix de l'assurance calculé par le modèle est : {answer}"
+        solve = isinstance(resApi, dict) and 'res' in resApi  # True si la clé 'res' est bien présente
+
+        # resApi:dict = api.call_api()
+        # if resApi['res']:
+        #     answer = api.call_api()['res']['montantIndemnisation']
+        # else: 
+        #     answer = api.call_api()
+        # sentence = "D'après les informations que tu as renseignée le prix de l'assurance calculer par le model est : ", answer
+        # solve = True
     
     print(solve)
     

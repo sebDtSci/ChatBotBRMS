@@ -1,5 +1,5 @@
 from src.generateS import Generate
-from src.memory import ChatbotMemory
+from shortterm_memory.ChatbotMemory import ChatbotMemory
 
 def test_memory():
     mem = ChatbotMemory()
