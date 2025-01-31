@@ -63,6 +63,9 @@ class Generate:
         solve_statue = False
         self.running = True
         self.response = ""
+
+        sentence:str = ""
+
         print("MEm de conversation_history : ",self.memory.get_memory())
         
         user_input =  user_input + self.memoire_contextuel_assurance if self.memoire_contextuel_assurance else user_input

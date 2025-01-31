@@ -10,7 +10,7 @@ def extract_number(s):
 
 
 def brmsCall(user_input:str)->str:
-    #TODO: refactoriser cette fonction avec "maisonPrice" !
+    #TODO[V]: refactoriser cette fonction avec "maisonPrice" !
     request = (
                 "Tu es un expêrt en data capture, ton role est d'extraire uniquement les données requises.\n\n"
                 "Extrait les informations au format liste suivant :\n Nom ; Prenom ; Age ; Adresse.\n\n."
@@ -29,7 +29,6 @@ def brmsCall(user_input:str)->str:
                 "Exemple numéro 9; utilisateur: '' réponse: \n\n"
                 "Exemple numéro 10; utilisateur: 'j'aurais une question sur l'assurance'\n réponse: \n\n"
                 "Exemple numéro 11; utilisateur: 'Salut, je voudrais des renseignements sur l'assurance d'Alice Golen, qui a 24 ans et qui vie au 4 rue peroque, à paris 75000, sa maison vaut 20000 euros'\n réponse: Golen ; Alice ; 24 ; 75000 ; 20000\n\n"
-
                 "Exemple numéro 12; Utilisateur : “Nous devons enregistrer les informations pour l’assurance de monsieur Jean Dupont, qui a 43 ans et habite au 12 avenue des Champs, Lyon 69000. Il possède une maison d’une valeur de 300000€.” Réponse : Dupont ; Jean ; 43 ; 69000 ; 300000"
                 "Exemple numéro 13; Utilisateur : “Madame Louise Martin souhaite souscrire une assurance. Elle a 52 ans et vit au 78 boulevard Haussmann, Paris 75008.” Réponse : Martin ; Louise ; 52 ; 75008"
                 "Exemple numéro 14; Utilisateur : “Je veux une assurance pour ma tante, elle s’appelle Sophie Lemaitre et réside à Bordeaux, 33000.” Réponse : Lemaitre ; Sophie ; ; 33000"
@@ -58,8 +57,8 @@ def brmsCall(user_input:str)->str:
     payload = pc.payload_construction(
         nom=elements3[0] if len(elements3) > 0 and elements3[0] else None,
         prenom=elements3[1] if len(elements3) > 1 and elements3[1] else None,
-        age=elements3[2] if len(elements3) > 2 and elements3[2] else None,
-        adresse=elements3[3] if len(elements3) > 3 and elements3[3] else None,
+        age=extract_number(elements3[2]) if len(elements3) > 2 and elements3[2] else None,
+        adresse=extract_number(elements3[3]) if len(elements3) > 3 and elements3[3] else None,
         maisonPrice= extract_number(elements3[4]) if len(elements3) > 4 and elements3[4] else None
     )
     
@@ -79,16 +78,8 @@ def brmsCall(user_input:str)->str:
         else:
             answer = "Erreur : réponse invalide de l'API"
 
-        sentence = f"D'après les informations que tu as renseignées, le prix de l'assurance calculé par le modèle est : {answer}"
+        sentence = f"D'après les informations que tu as renseignées, le prix de l'indemnité calculée par le modèle est : {answer}"
         solve = isinstance(resApi, dict) and 'res' in resApi  # True si la clé 'res' est bien présente
-
-        # resApi:dict = api.call_api()
-        # if resApi['res']:
-        #     answer = api.call_api()['res']['montantIndemnisation']
-        # else: 
-        #     answer = api.call_api()
-        # sentence = "D'après les informations que tu as renseignée le prix de l'assurance calculer par le model est : ", answer
-        # solve = True
     
     print(solve)
     
