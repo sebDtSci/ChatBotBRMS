@@ -129,5 +129,6 @@ class Generate:
             user_input = clear_dialog_element(user_input, liste_element)
             
         self.memory.update_memory(user_input, self.response)
+        print(f'réponse du modèle : /n/n {self.response}')
 
         self.running = False

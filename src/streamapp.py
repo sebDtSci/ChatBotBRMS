@@ -3,6 +3,7 @@ from generateS import Generate
 from saveConversation import save_conversation, load_conversations, delete_conversation
 # from memory import ChatbotMemory
 import subprocess
+import re
 
 def get_model_list():
     result = subprocess.run(["ollama", "list"], capture_output=True, text=True)
@@ -13,6 +14,38 @@ def get_model_list():
 def get_conversation_history(sauvegarde):
     for index, row in sauvegarde.iterrows():
         st.session_state.history.append({"user": row['user'], "bot": row['bot']})
+
+def remove_think_tags(text):
+    return re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL)
+
+def remove_think_tags_streaming(response, buffer, in_think):
+    """
+    Gère le texte partiellement chunké contenant des balises <think>...</think>.
+    - buffer : stocke le texte temporaire lorsqu'on est à l'intérieur de <think>.
+    - in_think : indique si on est actuellement à l'intérieur des balises <think>.
+    """
+    cleaned_response = ""
+
+    i = 0
+    while i < len(response):
+        if not in_think:
+            start_idx = response.find("<think>", i)
+            if start_idx != -1:
+                cleaned_response += response[i:start_idx]
+                in_think = True
+                i = start_idx + len("<think>")
+            else:
+                cleaned_response += response[i:]
+                break
+        else:
+            end_idx = response.find("</think>", i)
+            if end_idx != -1:
+                in_think = False
+                i = end_idx + len("</think>")
+            else:
+                break  # On attend le prochain chunk pour compléter la balise de fermeture
+
+    return cleaned_response, in_think
 
 def main():
     st.title("Chatbot Interface with Memory")
@@ -54,24 +87,50 @@ def main():
         st.rerun()
 
     # Gestion des réponses du chatbot après l'envoi du message
+    # if st.session_state.history and st.session_state.history[-1]["bot"] == "":
+    #     thinkTime = False
+    #     user_input = st.session_state.history[-1]["user"]
+    #     response_generator = chatbot.ans(user_input)
+    #     response = ""
+    #     response_placeholder = st.empty()
+
+    #     for chunk in response_generator:
+    #        response += chunk
+    #        response_placeholder.markdown(f"""
+    #     <div style="text-align: left; padding: 10px; margin: 10px 0;">
+    #        <div><b>Stem:</b></div>
+    #        <div style="background-color: #229954; border-radius: 10px; padding: 10px;">
+    #            {response}
+    #        </div>
+    #     </div>
+    #    """, unsafe_allow_html=True)
+
+    #     st.session_state.history[-1]["bot"] = response
+    #     st.rerun()
+    
     if st.session_state.history and st.session_state.history[-1]["bot"] == "":
         user_input = st.session_state.history[-1]["user"]
         response_generator = chatbot.ans(user_input)
         response = ""
         response_placeholder = st.empty()
 
+        buffer = ""      # Pour stocker le texte à l'intérieur des balises <think>
+        in_think = False # Indique si on est à l'intérieur d'une balise <think>
+
         for chunk in response_generator:
             response += chunk
+            cleaned_response, in_think = remove_think_tags_streaming(response, buffer, in_think)
+
             response_placeholder.markdown(f"""
-        <div style="text-align: left; padding: 10px; margin: 10px 0;">
-            <div><b>Stem:</b></div>
-            <div style="background-color: #229954; border-radius: 10px; padding: 10px;">
-                {response}
+            <div style="text-align: left; padding: 10px; margin: 10px 0;">
+                <div><b>Stem:</b></div>
+                <div style="background-color: #229954; border-radius: 10px; padding: 10px;">
+                    {cleaned_response}
+                </div>
             </div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        st.session_state.history[-1]["bot"] = response
+            """, unsafe_allow_html=True)
+
+        st.session_state.history[-1]["bot"] = cleaned_response
         st.rerun()
     
     # Affichage de l'historique des conversations
