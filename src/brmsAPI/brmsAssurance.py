@@ -36,8 +36,10 @@ def brmsCall(user_input:str)->str:
                 "Exemple numéro 16; Utilisateur : “Je cherche une assurance pour Alice Dubois, qui a 37 ans et vit à Marseille, 13001.” Réponse : Dubois ; Alice ; 37 ; 13001"
                 "Exemple numéro 17; Utilisateur : “Je veux une assurance pour monsieur Jacques, qui a 50 ans et vit au 10 rue de la Paix, Paris 75000.” Réponse : ; Jacques ; 50 ; 75000 ;"
                 "Exemple numéro 18; Utilisateur : 'et pour l'assurance de Arthure Grore , qui à 24 ans' Réponse : Grore ; Arthure ; 24 ; ;  "
-                "Example numéro 19; Utilisateur : 'le prix de sa maison est de 100000 et il vit à Paris 75000 + ces éléments ont déjà été mentionné et sont à retenir pour l'assurance : ['Grore', 'Arthure', '24']' reéponse: Grore ; Arthure ; 24 ; 75000 ; 100000"
-
+                "Example numéro 19; Utilisateur : 'le prix de sa maison est de 100000 et il vit à Paris 75000 + ces éléments ont déjà été mentionné et sont à retenir pour l'assurance : ['Grore', 'Arthure', '24']' Réponse: Grore ; Arthure ; 24 ; 75000 ; 100000"
+                "Exemple numéro 20; Utilisateur : 'Nous devons assurer monsieur Pierre Lambert, âgé de 45 ans, habitant au 23 rue des Lilas, Toulouse 31000. Sa maison est estimée à 220000€.' Réponse: Lambert ; Pierre ; 45 ; 31000 ; 220000"
+                "Exemple numéro 21; Utilisateur : 'Elle s’appelle Sophie Moreau et possède une maison valant 150000€.' Réponse: Moreau ; Sophie ; ; ; 150000"
+                "Exemple numéro 22; Utilisateur : 'Pour l’assurance de Lucie Martin, elle a 29 ans et vit à Lyon, 69000.' Réponse: Martin ; Lucie ; 29 ; 69000 ; "
 
                 "Voici la phrase cible: " f"{user_input}"
                 )
@@ -53,7 +55,6 @@ def brmsCall(user_input:str)->str:
     elements2 = re.sub(r'[^a-zA-Z0-9;]', '', elements["response"])
     elements3 = [elem.strip() for elem in elements2.split(';') if elem.strip()]
     print("2: ------------------------------------------------>>>>>>------------------------------------------------>>>>>>",elements3)
-    # payload = pc.payload_construction(nom=elements3[0], prenom=elements3[1], age=elements3[2], adresse=elements3[3])
     payload = pc.payload_construction(
         nom=elements3[0] if len(elements3) > 0 and elements3[0] else None,
         prenom=elements3[1] if len(elements3) > 1 and elements3[1] else None,
@@ -67,7 +68,7 @@ def brmsCall(user_input:str)->str:
     test_completion, erreur = api.test_arguments()
     print("3: ------------------------------------------------>>>>>>", test_completion)
     if erreur:
-        sentence = "Tu dois indiquer à ton interlocuteur que tu ne peux pas répondre pour la raison suivante : ", test_completion, "Il dois ipérativement te donner toutes les informations dans l'ordre si possible. \n\n Répond uniquement que tu ne peux pas répondre sans ces informations primordiales! Aide toi des raisons données pour expliquer. \n\n Il doit impérativement te redonner toutes les informations ! Nom, Prénom, Age, Adresse "
+        sentence = "Tu dois indiquer à ton interlocuteur que tu ne peux pas répondre pour la raison suivante : ", test_completion, "Il dois ipérativement te donner toutes les informations dans l'ordre si possible. \n\n Répond uniquement que tu ne peux pas répondre sans ces informations primordiales! Aide toi des raisons données pour expliquer. \n\n"
         solve = False
     else:
 
@@ -78,10 +79,10 @@ def brmsCall(user_input:str)->str:
         else:
             answer = "Erreur : réponse invalide de l'API"
 
-        sentence = f"D'après les informations que tu as renseignées, le prix de l'indemnité calculée par le modèle est : {answer}"
+        sentence = f"D'après les informations renseignées parl'utilisateur, le prix de l'indemnité calculée par le modèle est : {answer}"
         solve = isinstance(resApi, dict) and 'res' in resApi  # True si la clé 'res' est bien présente
     
-    print(solve)
+    print(f"solve : {solve}")
     
     return sentence, elements3, solve
 

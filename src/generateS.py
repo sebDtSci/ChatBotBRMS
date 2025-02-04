@@ -2,11 +2,11 @@ import ollama
 import logging
 import streamlit as st
 import os
-from ReflectionTuning import GenerateReflexion
+import asyncio
 
 # ChatBot integration
 from shortterm_memory.ChatbotMemory import ChatbotMemory
-from rag.new_chromadb import rag_pipeline
+# from rag.new_chromadb import rag_pipeline
 
 #BRMS integration
 from brmsAPI.brmsAssurance import brmsCall, clear_dialog_element
@@ -26,7 +26,6 @@ class Generate:
         self.response = ""
         self.suma_on_run = False
         self.assurance_phase = False
-        self.internal_reflextion = GenerateReflexion(model='openchat:latest')
         self.memoire_contextuel_assurance = ""
     
     def remember(self, sauvegarde)-> None:
@@ -41,12 +40,14 @@ class Generate:
         """
 
         try:
-            for index, row in sauvegarde.iterrows():
+            for _, row in sauvegarde.iterrows():
                 self.memory.update_memory(row['user'], row['bot'])
             st.sidebar.success("Load !")
         except Exception as e:
             st.sidebar.error(f"Error : {e}")
-        
+
+    async def _async_brms_call(self, user_input):
+        return brmsCall(user_input)        
 
     def ans(self, user_input:str):#user_input="l'assurance de manon qui à 34 ans et qui habite à paris"): # Debug modification
         """
@@ -76,16 +77,12 @@ class Generate:
         if "assurance" in user_input:
             self.assurance_phase = True
             sentence, liste_element, solve_statue = brmsCall(user_input)
-            reflexion_input = ""
         ####################
-        else:
-            # reflexion_input = self.internal_reflextion.gen(user_input,self.memory.get_memory())
-            reflexion_input = " "
         
-        context = rag_pipeline(query=user_input)
+        # context = rag_pipeline(query=user_input)
         
         if self.assurance_phase:
-            assurance_output = "Voici le retour du systême expert :\n ",sentence
+            assurance_output = "Ne te fis qu'à la réponse du système expert. Voici le retour du systême expert :\n ",sentence
             if solve_statue:
                 self.memoire_contextuel_assurance = ""
             else:
@@ -93,21 +90,17 @@ class Generate:
         else:
             assurance_output = ""
             self.memoire_contextuel_assurance = ""
-        print("----------------->>>>>>",assurance_output )
+        print("----------------->>>>>>",assurance_output)
         
         prompt = (
-            "Vous êtes un assistant intelligent. Utilisez les informations suivantes pour aider l'utilisateur.\n\n"
+            "Tu es un assistant intelligent. Utilise les informations suivantes pour aider l'utilisateur.\n\n"
             "Mémoire du chatbot (à ne pas montrer à l'utilisateur) :\n"
             f"{self.memory.get_memory()}\n\n"
-            "Contexte pertinent :\n"
-            f"{context}\n\n"
+            # "Contexte pertinent :\n"
+            # f"{context}\n\n"
             "Question de l'utilisateur :\n"
             f"{user_input}\n\n"
             f"{assurance_output}\n\n"
-            # "Voici les étapes de reflexion donné par l'agent dédié au 'Reflection-Tuning' qui pourrait t'aider à répondre.\n"
-            # "Ces instructions ne sont que pour toi ne les dévoile pas :\n"
-            # "Tu peux en tenir compte ou les ignorer :\n"
-            # f"{reflexion_input}\n\n"
             "Répondez de manière claire et CONCISE et avec une mise en forme lisible et structuré :\n"
         )
         result = ollama.generate(
@@ -116,7 +109,7 @@ class Generate:
             stream=True,
             options=self._ollama_option
         )
-        print(f"Response generated. with model : {self.model}")
+        # print(f"Response generated. with model : {self.model}")
         logging.info(f"Response generated. with model : {self.model}")
         
         self.response = ""
